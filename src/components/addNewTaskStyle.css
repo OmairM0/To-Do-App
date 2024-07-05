@@ -1,0 +1,41 @@
+.add-new-task {
+  margin-bottom: 5px;
+}
+
+.add-new-task div input {
+  background-color: var(--color-main);
+  border: 1px solid var(--color-white);
+  /* border-radius: 5px; */
+  padding: 10px 5px;
+  color: var(--color-white);
+  /* color: #393e46; */
+  width: 100%;
+  font-size: 17px;
+}
+
+.add-new-task input:focus {
+  outline: none;
+  border: 1px solid var(--color-yellow);
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btns button {
+  background-color: var(--color-yellow);
+  border: none;
+  margin-right: 5px;
+  margin-top: 7px;
+  padding: 8px 5px;
+  width: 70px;
+  font-weight: 600;
+  color: var(--color-main);
+  border-radius: 2px;
+}
+
+.btns button:first-of-type {
+  background-color: var(--color-secondray);
+  color: var(--color-white);
+}

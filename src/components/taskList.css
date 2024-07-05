@@ -1,0 +1,13 @@
+.show-add-new-task-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--color-white);
+  transition: 0.3s;
+  padding: 10px 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.show-add-new-task-btn:hover {
+  background-color: var(--color-secondray);
+}

@@ -1,0 +1,19 @@
+.home .logo {
+  text-align: center;
+}
+
+.home .user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--color-secondray);
+  padding: 5px 0;
+}
+
+.home .user .name {
+  color: var(--color-yellow);
+}
+
+.home .logout {
+  cursor: pointer;
+}

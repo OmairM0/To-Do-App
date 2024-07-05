@@ -23,9 +23,9 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
 2. Install dependencies:
-   'npm install'
+   `npm install`
 3. Start the development server:
-   'npm run start'
+   `npm run start`
 
 ## App images
 

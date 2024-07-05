@@ -7,7 +7,11 @@ import "./taskList.css";
 import TaskFilter from "./TaskFilter";
 
 function TasksList() {
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
+  const [tasks, setTasks] = useState(
+    localStorage.getItem("tasks")
+      ? JSON.parse(localStorage.getItem("tasks"))
+      : []
+  );
   const [showNewTaskInput, setShowNewTaskInput] = useState(false);
   // const [isChecked, setChecked] = useState(false);
 
@@ -56,23 +60,27 @@ function TasksList() {
 
   return (
     <div>
-      <TaskFilter
-        filterByAll={filterByAll}
-        filterByCompleted={filterByCompleted}
-        filterByIncompleted={filterByIncompleted}
-      />
-      <ul>
-        {filterdTasks.map((task) => (
-          <Task
-            key={task.name}
-            name={task.name}
-            checked={task.isChecked}
-            onToggleTask={handleToggleTask}
-            onDeleteTask={handleDeleteTask}
-            onEditTask={handleEditTask}
+      {filterdTasks.length < 1 || (
+        <div>
+          <TaskFilter
+            filterByAll={filterByAll}
+            filterByCompleted={filterByCompleted}
+            filterByIncompleted={filterByIncompleted}
           />
-        ))}
-      </ul>
+          <ul>
+            {filterdTasks.map((task) => (
+              <Task
+                key={task.name}
+                name={task.name}
+                checked={task.isChecked}
+                onToggleTask={handleToggleTask}
+                onDeleteTask={handleDeleteTask}
+                onEditTask={handleEditTask}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
 
       {!showNewTaskInput ? (
         <button
